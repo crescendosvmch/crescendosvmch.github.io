@@ -70,6 +70,29 @@
     <!-- Script -->
     <script src="script.js"></script>
   
+      
+      <!-- Script For alert message-->
+<script src="script.js"></script>
+<script>
+  window.onload = function() {
+    initClock();
+    setTimeout(function() {
+      displayPopup('Still the sports points are not added to the score. Sports points will be added soon.', 15000);
+    }, 100);
+  };
+
+  function displayPopup(message, duration) {
+    var popup = document.createElement('div');
+    popup.className = 'popup';
+    popup.textContent = message;
+    document.body.appendChild(popup);
+
+    setTimeout(function() {
+      popup.style.display = 'none';
+    }, duration);
+  }
+</script>
+      
 <!-------- Date And Time ------->
 
     <!--digital clock start-->
